@@ -14,7 +14,7 @@ const ProjectSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         default : null
     },
-    desc: {
+    description: {
         type: String,
         default: "توضیحی وجود ندارد"
     },

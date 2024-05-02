@@ -1,8 +1,11 @@
+import mongoose from "mongoose";
 import User from "../models/User.js";
 import { errorHandler, getIdByToken } from "./auxiliary.service.js";
+import Task from "../models/Task.js";
 
 const getUser = async (req, res) => {
-    const foundedUser = await User.findById(getIdByToken(req.body.token))
+    const userId = await getIdByToken(req.body.token)
+    const foundedUser = await User.findById(userId)
     res.send(foundedUser)
 }
 
@@ -40,11 +43,25 @@ const searchUsers  = async (req, res) => {
             lastname: user.lastname,
             username: user.username
         }})
-    res.send(users)
+    
+    res.send({
+        type : "SEARCH_USERS",
+        body: users
+    })
+}
+
+const getUserTasks = async (req, res) => {
+    const userId = req.body.body.userId
+    const tasks = await Task.find({ownerId : userId})
+    const tasks2 = await Task.find({assignees : {"$in" : [userId]}})
+
 
 }
+
+
 export {
     getUser,
     updateUser,
-    searchUsers
+    searchUsers,
+    getUserTasks
 }

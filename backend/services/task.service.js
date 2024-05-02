@@ -11,7 +11,6 @@ const getFullNameById = async id => {
 const createTask = async (req, res) => {
     try {
         const ownerId = await getIdByToken(req.body.token)
-        console.log(ownerId);
         const mainBody = req.body.body
         const mainImage = mainBody.image
         const mainFile = mainBody.file
@@ -103,7 +102,8 @@ const updateTask = async (req, res) => {
 
 const getTasks = async (req, res) => {
     try {
-    const tasksArr = await Task.find({})
+    const projectId = req.body.body.projectId
+    const tasksArr = await Task.find({projectId})
     let buldingArr = [[1], [2] ,[3] , [4] , [5] , [6] , [7]]
     buldingArr = buldingArr.map(x => tasksArr.filter(t => t.floor === x[0]).map(t => {return {title: t.title , description: t.description}}))
     res.send({ 

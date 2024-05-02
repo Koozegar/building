@@ -23,8 +23,8 @@ const UserSchema = new mongoose.Schema({
       enum: {
         values : ["male" , "female"],
         message : "enum validator failded, state must be `male` or `female` "
-    },
-    default: "male",
+      },
+      default: "male",
       required: false,
     },
     birthday: {
@@ -39,6 +39,7 @@ const UserSchema = new mongoose.Schema({
       unique: true,
       validate: {
       validator: function (value) {
+        if(value==null)  return true
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
       },
       message: props => `${props.value} is not a valid email!`,

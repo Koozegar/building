@@ -19,7 +19,7 @@ const projectsForTreeView = (projectsArr) => {
     const childrenFounder = arr => obj => {
         if(arr.find(x => _.isEqual(x.parentId, obj.id))){
             console.log("salsm");
-            obj.children.push(...arr.filter(x=> _.isEqual(x.parentId, obj.id)).map(x=>treeView(x)).map(x => childrenFounder(arr)(x)))
+            obj.children.push(...arr.filter(x=> _.isEqual(x.parentId, obj.id)).map(x=>toTreeView(x)).map(x => childrenFounder(arr)(x)))
             return obj
         } else return  obj
     }

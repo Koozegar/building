@@ -4,15 +4,15 @@ import Grid from '@mui/material/Grid';
 import './App.css';
 import LoginSignup from "./component/login-signup";
 import AddJobReport from "./component/AdJobRep"
+import MainView from './component/building-mainview';
+
 
 function App() {
 
     return (
-        <Box>
-            {/* <LoginSignup/> */}
-            <AddJobReport/>
+            <MainView/>
             
-        </Box>
+        
     )
 }
 

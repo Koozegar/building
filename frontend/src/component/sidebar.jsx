@@ -7,6 +7,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import PermIdentityRoundedIcon from '@mui/icons-material/PermIdentityRounded';import { Typography, Box } from '@mui/material';
 import './custom-button.css'
 import FilterVintageRoundedIcon from '@mui/icons-material/FilterVintageRounded';
+import TreeView from './treeView';
 
 
 const Sidebar = () => {
@@ -26,7 +27,6 @@ const Sidebar = () => {
             <Paper sx={{
                 width: isOpen ? 361 : 92,
                 height: '88vh',
-                position: 'fixed',
                 right: 52,
                 top: 52,
                 backgroundColor: 'white',
@@ -36,6 +36,9 @@ const Sidebar = () => {
                 padding: '10px',
                 boxSizing: 'border-box',
                 justifyContent: 'flex-start', // Ensure items align to the top
+                whiteSpace: 'nowrap',
+                overflowY: isOpen ? 'auto':'hidden',
+                overflowX:'hidden'
             }}>
                 <Box sx={{
                     display: 'flex',
@@ -65,21 +68,10 @@ const Sidebar = () => {
                         <PermIdentityRoundedIcon sx={{ color:'#F15F2B',fontSize:'32px',top:'204px' }} />
                     </IconButton>
                 </Box>
-                <Box sx={{ alignSelf: 'center', display: 'flex',
-                    flexDirection: isOpen ? 'row' : 'column',
-                    alignItems: 'center',marginTop:'30px',
-                    backgroundColor:'rgba(241, 95, 43, 0.1)',
-                    width: isOpen ? '295px' : '50px',
-                    height: isOpen ? 'auto' : '50px',
-                    borderRadius: isOpen ? '45px' : '50%',
-                    justifyContent: isOpen ? 'right' : 'center',
-                }}>
-                    {isOpen && <Typography sx={{ mr: 1 ,fontFamily:'vazir',
-                        fontSize:'20px',fontWeight:500,
-                    }}>پروژه‌ها</Typography>}
-                    <IconButton onClick={handleActionClick}>
-                        <CheckIcon sx={{ fontSize:'32px',top:'288px',color:'#F15F2B' }} />
-                    </IconButton>
+                <Box
+                sx={{marginLeft:'-30px',marginTop:'10px'}}
+                >
+                    {isOpen && <TreeView></TreeView>}
                 </Box>
                 <Box sx={{ alignSelf: 'center', display: 'flex',
                     flexDirection: isOpen ? 'row' : 'column',

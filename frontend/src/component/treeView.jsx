@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './treeView.css';
-import styled from 'styled-components';
 
 
 const data = {
@@ -62,6 +61,7 @@ export default function treeView() {
 	// 	backgroundColor:'red'
 	// }))
 	const renderTree = (nodes) => (
+		
 		<Container>
 
 			<TreeItem
@@ -69,11 +69,6 @@ export default function treeView() {
 				sx={{
 					'& > .MuiTreeItem-content.Mui-selected': {
 						color: 'rgba(241, 95, 43, 1)',
-						textDecoration:'overline',
-						textDecorationStyle:'double',
-						textDecorationThickness:'2px',
-						// border: "2px solid rgba(241, 95, 43, 1)",
-						// backgroundColor: 'rgba(241, 95, 43, 0.25)',
 					},
 
 
@@ -81,7 +76,7 @@ export default function treeView() {
 						backgroundColor: '#fff !important',
 					},
 					'& .css-1oqqzyl-MuiContainer-root': {
-						marginLeft: '-6.1%'
+						marginLeft: '-13%'
 					},
 					'& .css-i4bv87-MuiSvgIcon-root': {
 						marginRight: '-470%',
@@ -104,7 +99,7 @@ export default function treeView() {
 							fontFamily: 'vazir',
 							textAlign: 'right',
 							bgcolor: 'rgba(241, 95, 43, 0.2)',
-							//SALAM
+							//SALA
 							whiteSpace: 'nowrap',
 							overflow: 'hidden',
 							textOverflow: 'ellipsis',
@@ -120,7 +115,7 @@ export default function treeView() {
 							maxHeight: "30px",
 							maxWidth: 'auto',
 							height: "fit-content",
-							width: "30%",
+							
 
 
 						}} >
@@ -139,14 +134,16 @@ export default function treeView() {
 	return (
 		<Box sx={{
 
-			border: '1px solid gray',
 			height: '100hv',
-			width: '50%',
+			width: '0%',
 			bgcolor: "white",
 		}}
 
 		>
 			<TreeView
+				sx={{
+					width:'400px'
+				}}
 				aria-label="rich object"
 				defaultCollapseIcon={<ExpandLessIcon></ExpandLessIcon>}
 				defaultExpandIcon={<ExpandMoreIcon></ExpandMoreIcon>}

@@ -14,7 +14,9 @@ export default  function FloorContent() {
   const avatars = [];
   for (let i = 0; i < 15; i++) {
     avatars.push(  
-        <CustomizedDialogs keyy={2}/>
+      <CustomizedDialogs keyy={2}
+      sx={{}}
+      />
     );
   }
 
@@ -36,12 +38,13 @@ sx={{
         m:"auto",
         position: 'relative',
         scrollMargin:'100px',
+
       }}
 >
 
-        <Card  sx={{backgroundColor:'#FFFFFF' , minWidth: '100vh', overflow: 'auto' }}>
+        <Card  sx={{backgroundColor:'#FFFFFF' , minWidth: '150vh',minHeight:'90px',alignContent:'center'}}>
           {avatars}
-          </Card> 
+        </Card> 
       </Paper>
       </Grid>
   )

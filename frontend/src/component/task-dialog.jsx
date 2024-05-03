@@ -113,8 +113,6 @@ export default function CustomizedDialogs(keyy) {
                         '-ms-transform': 'translateY( -50%)',
                         transform: 'translateY( -50%)',
                         flexFlow: '1',
-
-
                     }}
                 >
                 </Avatar>

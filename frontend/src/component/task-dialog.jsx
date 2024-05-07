@@ -99,7 +99,7 @@ export default function CustomizedDialogs(keyy) {
     
     return (
         <React.Fragment>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button variant="outlined" onClick={handleClickOpen} sx={{margin:'3px'}}>
                 <Avatar
                     key={keyy}
                     sx={{

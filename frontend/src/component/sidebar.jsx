@@ -23,12 +23,11 @@ const Sidebar = () => {
     };
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start', height: '100vh' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start', position: 'relative' }}>
             <Paper sx={{
                 width: isOpen ? 361 : 92,
-                height: '88vh',
+                height: '710px',
                 right: 52,
-                top: 52,
                 backgroundColor: 'white',
                 borderRadius: '12px',
                 display: 'flex',
@@ -38,21 +37,26 @@ const Sidebar = () => {
                 justifyContent: 'flex-start', // Ensure items align to the top
                 whiteSpace: 'nowrap',
                 overflowY: isOpen ? 'auto':'hidden',
-                overflowX:'hidden'
+                overflowX:'hidden',
+                alignItems:'center',
             }}>
-                <Box sx={{
+                <Box 
+                    sx={{
+                    position: 'absolute',
+                    top: '0px',
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
-                    width: '100%',
-                    paddingLeft: '10px',
                     marginBottom: '10px',
-                }}>
-                    <IconButton onClick={toggleSidebar} sx={{ marginRight: 'auto', color: '#463F3F', }}>
+                    backgroundColor:'white',
+                    zIndex:'1',
+                    borderRadius:'12px'
+                    }}>
+                    <IconButton onClick={toggleSidebar} sx={{ color: '#463F3F', }}>
                         {isOpen ? <CloseIcon sx={{fontSize:'3rem'}} /> : <MenuIcon sx={{fontSize:'2.5rem'}} />}
                     </IconButton>
-                    {isOpen && <Typography sx={{marginRight:'30px',fontFamily:'vazir',fontSize:'28px',fontWeight:500 }}>نوار کاربری</Typography>}
+                    {isOpen && <Typography sx={{fontFamily:'vazir',fontSize:'28px',fontWeight:500,width:'290px',textAlign:'end'}}>نوار کاربری</Typography>}
                 </Box>
                 <Box sx={{ alignSelf: 'center', display: 'flex',
                     flexDirection: isOpen ? 'row' : 'column',
@@ -71,17 +75,34 @@ const Sidebar = () => {
                 <Box
                 sx={{marginLeft:'-30px',marginTop:'10px'}}
                 >
-                    {isOpen && <TreeView></TreeView>}
+                    {isOpen && <Box><TreeView/><TreeView/><TreeView/><TreeView/></Box>}
                 </Box>
-                <Box sx={{ alignSelf: 'center', display: 'flex',
-                    flexDirection: isOpen ? 'row' : 'column',
-                    alignItems: 'center',marginTop:'430px',
+                <Box sx={{ alignSelf: 'center',
+                    display: 'flex',
+                    alignItems: 'center',
+                    backgroundColor:'white',
+                    width: isOpen ? '350px' : '50px',
+                    height: isOpen ? '70px' : '',
+                    justifyContent:'flex-end',
+                    position: 'absolute',
+                    zIndex:'1',
+                    bottom:'0',
+                    borderRadius:'12px'
+                }}>
+                <Box sx={{ alignSelf: 'center',
+                    display: 'flex',
+                    alignItems: 'center',
                     backgroundColor:'rgba(241, 95, 43, 0.1)',
                     width: isOpen ? '295px' : '50px',
                     height: isOpen ? 'auto' : '50px',
                     borderRadius: isOpen ? '45px' : '50%',
-                    justifyContent: isOpen ? 'right' : 'center',
-
+                    // justifyContent: isOpen ? 'right' : 'center',
+                    justifyContent:'flex-end',
+                    position: 'absolute',
+                    flexDirection: 'row',
+                    marginBottom: '10px',
+                    zIndex:'1',
+                    bottom:'0'
                 }}>
                     {isOpen && <Typography sx={{ mr: 1 ,fontFamily:'vazir',
                         fontSize:'20px',fontWeight:500,
@@ -89,6 +110,7 @@ const Sidebar = () => {
                     <IconButton onClick={handleActionClick}>
                         <FilterVintageRoundedIcon sx={{ fontSize:'32px',top:'288px',color:'#F15F2B' }} />
                     </IconButton>
+                </Box>
                 </Box>
             </Paper>
         </Box>

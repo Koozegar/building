@@ -3,7 +3,7 @@ import {Typography , Alert , Snackbar , Grid , Button} from '@mui/material';
 
 import './text-fild.css'
 
-export default function CustomizedSnackbars(text) {
+export default function CustomizedSnackbars(text,x) {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -41,7 +41,7 @@ export default function CustomizedSnackbars(text) {
             fontSize: '16px'
           },
           '& .css-ki1hdl-MuiAlert-action': {
-            backgroundColor: '#9C0E0E',
+             backgroundColor: x==1 ? '#408140':'#9C0E0E',
             position: 'relative',
             left: '-19px',
             borderRadius: '12px 0px 0px 12px',
@@ -59,7 +59,7 @@ export default function CustomizedSnackbars(text) {
           onClose={handleClose}
           variant="filled"
           sx={{
-            borderRadius: '12px', width: '100%', fontFamily: 'vazir', maxWidth: '285px', maxHeight: '40px', minWidth: '285px', minHeight: '40px', backgroundColor: '#E92C08', textAlign: 'right'
+            borderRadius: '12px', width: '100%', fontFamily: 'vazir', maxWidth: '285px', maxHeight: '40px', minWidth: '285px', minHeight: '40px', backgroundColor: x==1 ? '#5cb85c':'#E92C08', textAlign: 'right'
           }}
         >
           <Typography

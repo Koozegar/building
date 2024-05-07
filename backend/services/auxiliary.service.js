@@ -1,4 +1,3 @@
-import { Email } from "@mui/icons-material";
 import Auth from "../models/Auth.js"
 
 const textErrorResult = (arr, dict) => {

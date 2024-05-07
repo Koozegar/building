@@ -1,3 +1,4 @@
+import { Email } from "@mui/icons-material";
 import Auth from "../models/Auth.js"
 
 const textErrorResult = (arr, dict) => {
@@ -15,7 +16,8 @@ const errorHandler = (e) => {
         title:"عنوان",
         _id: "آیدی",
         birthday: "تاریخ تولد",
-        title: "عنوان"
+        title: "عنوان",
+        email: "ایمیل"
     }
     e = e.toString()
     console.log(e);

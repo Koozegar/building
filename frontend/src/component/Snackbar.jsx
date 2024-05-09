@@ -41,7 +41,7 @@ export default function CustomizedSnackbars(text,x) {
             fontSize: '16px'
           },
           '& .css-ki1hdl-MuiAlert-action': {
-             backgroundColor: x==1 ? '#408140':'#9C0E0E',
+             backgroundColor: x==1 ? '#398044':'#9C0E0E',
             position: 'relative',
             left: '-19px',
             borderRadius: '12px 0px 0px 12px',
@@ -57,13 +57,19 @@ export default function CustomizedSnackbars(text,x) {
           icon={false}
           severity='error'
           onClose={handleClose}
+     
+     
+     
+     
+     
+     
           variant="filled"
           sx={{
-            borderRadius: '12px', width: '100%', fontFamily: 'vazir', maxWidth: '285px', maxHeight: '40px', minWidth: '285px', minHeight: '40px', backgroundColor: x==1 ? '#5cb85c':'#E92C08', textAlign: 'right'
+            borderRadius: '12px', width: '100%', fontFamily: 'vazir', maxWidth: '285px', maxHeight: '40px', minWidth: '285px', minHeight: '40px', backgroundColor: x==1 ? '#7FCE8B':'#E92C08', textAlign: 'right'
           }}
         >
           <Typography
-            sx={{ fontFamily: 'vazir', whiteSpace: 'nowrap', marginLeft: 30 }}>
+            sx={{ fontFamily: 'vazir', whiteSpace: 'nowrap', marginLeft: 30 , color: x==1 ? '#398044':'#9C0E0E' }}>
             {text}
           </Typography>
         </Alert>

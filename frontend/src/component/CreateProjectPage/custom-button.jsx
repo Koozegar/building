@@ -12,13 +12,18 @@ import './custom-button.css'
 
 const DemoButton = styled(Button)(({ theme }) => ({
     // width: 300,
-    maxWidth: '340px', maxHeight: '50px', minWidth: '340px', minHeight: '50px',
+    maxWidth: '340px', maxHeight: '50px', minWidth: '100px', minHeight: '50px', width:'195px',
     ...theme.typography.body2,
     margin:"10px",
+    paddingLeft:'10px',
+    paddingTop:'50px',
     borderRadius: "12px",
     backgroundColor: "#F15F2B",
     color: "#FFFFFF",
-    fontFamily:"vazir"
+    fontFamily:"vazir",
+    fontSize:'24px',
+    fontWeight:'700px',
+    textAlign:'top'
 }))
 
 const theme = createTheme({

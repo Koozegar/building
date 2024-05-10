@@ -9,6 +9,9 @@ import { styled } from '@mui/material/styles';
 import './text-fild.css'
 
 const DemoInput = styled(TextField)(({ theme }) => ({
+    fontFamily:'vazir',
+    fontSize:'30px',
+    fontWeight:'700px',
     width: '340px',
     height:'50px',
     ...theme.typography.body2,

@@ -8,6 +8,7 @@ import Paper from "@mui/material/Paper";
 import {TextField} from "@mui/material";
 import EditButton from "./ButtonEdit";
 import CustomButton from "./custom-button";
+import Direction from './direction'
 //Text input تست شد
 //Switch input... تست شد
 //Custom button... تست شد
@@ -31,31 +32,43 @@ const TitleStyle={
     fontSize:'40px',
     color:'(70, 63, 63, 1)',
     paddingTop: '67px',
-    marginLeft: '152px',
+    marginLeft: '160px',
     marginRight: 'auto'
 }
 const TextFieldStyle ={
     width: '438px',
     backgroundColor: 'rgba(243, 243, 243, 1)',
-    marginLeft:'68px',
+    marginLeft:'75px',
     borderRadius: '45px',
     border:'none',
     borderColor:'rgba(243, 243, 243, 1)',
     direction:'rtl',
     fontFamily: 'vazir',
+    fontSize:'30px',
     marginTop: '50px'
 }
 const SwitchStyle={
-    marginLeft:'68px',
+    marginLeft:'75px',
     fontFamily:'vazir',
     fontSize: '20px',
     fontWeight: '500px',
     marginTop:'50px'
 }
 const EditButtonStyle={
-    marginLeft:'68px',
+    marginLeft:'75px',
     marginTop:'50px',
     width:'438px',
+}
+const CustomButtonStyle={
+    width:'300px',
+    backgroundColor:'blue',
+    marginLeft:'68px',
+    fontFamily:'vazir',
+    textAlign:'top'
+}
+const DirectionStyle={
+    marginRight:'75px',
+    marginTop:'40px'
 }
 function CreateProjectPage (){
     return(<Paper sx={PaperStyle}>
@@ -63,18 +76,18 @@ function CreateProjectPage (){
         <Grid ><TextField placeholder='عنوان پروژه' sx={TextFieldStyle} /></Grid>
         <Grid sx={SwitchStyle}>
             <SwitchInput sx={{
-                marginRight:'10px'
+                marginRight:'10px',
+
             }}/>
                 آیا این پروژه زیر مجموعه پروژه دیگری است؟
         </Grid>
         <Grid sx={EditButtonStyle}><EditButton /></Grid>
-        <Grid>
-            <CustomButton/>
+        <Grid sx={DirectionStyle}>
+            <Direction arr={[1,2,3]} />
         </Grid>
-        <Grid>
-
+        <Grid sx={{width:'438px',marginLeft:'68px',marginTop:'50px'}}>
+            <CustomButton name={'انصراف'} sx={CustomButtonStyle} /> <CustomButton name={'ایجاد'} sx={CustomButtonStyle} />
         </Grid>
-        <Grid></Grid>
     </Paper>)
 }
 export default CreateProjectPage

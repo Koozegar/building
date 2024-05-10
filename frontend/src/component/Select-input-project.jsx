@@ -39,7 +39,7 @@ export default function MultipleSelectPlaceholder() {
           value={personName}
           renderValue={(selected) => {
             if (selected.length === 0) {
-              return 'انتخاب طبقه';
+              return 'انتخاب پروژه';
             }
 
             return selected.join(', ');

@@ -10,7 +10,7 @@ const SelectProjectPage = () => {
 
 
   return (
-    
+    <Box my={1}>
     <Grid
     sx={{
         height: "723px",
@@ -69,6 +69,7 @@ const SelectProjectPage = () => {
         انتخاب
         </Button>
     </Grid>
+    </Box>
   )
 }
 

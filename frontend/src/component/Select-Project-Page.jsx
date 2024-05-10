@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, IconButton, Paper, Stack, Typography } fr
 import React, { useState } from 'react'
 import CloseIcon from '@mui/icons-material/CloseRounded';
 import TreeView2 from './TreeView2';
+import './login-singup.css'
 
 
 
@@ -19,7 +20,7 @@ const SelectProjectPage = () => {
         borderRadius: "30px",
         fontSize: "36px",
         justifyContent: 'center',
-        margin: "auto"
+        margin: "auto",
       }}
     container
     >
@@ -44,6 +45,8 @@ const SelectProjectPage = () => {
   fontSize: "40px",
   mt: '30px',
   position: 'absolute',
+  fontFamily: "yekan",
+
   }}
   > انتخاب پروژه </Typography>
 
@@ -64,6 +67,8 @@ const SelectProjectPage = () => {
     width:'438px',
     height:'64px',
     borderRadius: '12px', 
+    fontFamily: "yekan",
+
     }}
     >
         انتخاب

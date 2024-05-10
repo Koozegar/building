@@ -12,15 +12,16 @@ const SelectProjectPage = () => {
   return (
     
     <Grid
-      sx={{
+    sx={{
         height: "723px",
         width: "586px",
         bgcolor: "white",
         borderRadius: "30px",
         fontSize: "36px",
+        justifyContent: 'center',
+        margin: "auto"
       }}
-      alignContent={'center'}
-
+    container
     >
       <Stack>
         <IconButton
@@ -29,8 +30,8 @@ const SelectProjectPage = () => {
           width: '50px',
           height: '50px',
           color: '#463F3F',
-          left: "515px",
-          top: "-105px",
+          ml: '500px',
+          mt: '10px'
           }}
         >
       <CloseIcon
@@ -41,15 +42,20 @@ const SelectProjectPage = () => {
 <Typography 
   sx={{
   fontSize: "40px",
-  top: '-120px',
-  position: "relative",
-  textAlign: 'center',
-  }}> انتخاب پروژه </Typography>
+  mt: '30px',
+  position: 'absolute',
+  }}
+  > انتخاب پروژه </Typography>
 
-  <Container sx={{  position: "relative",
+  <Container
+  
+   sx={{  
+    position: "relative",
     left: '49px',
-    top: '-80px',
-    }} >
+    top: '-40px',
+    
+  }}
+     >
   <TreeView2></TreeView2>
   </Container>
   <Button variant="contained" 
@@ -58,8 +64,6 @@ const SelectProjectPage = () => {
     width:'438px',
     height:'64px',
     borderRadius: '12px', 
-    left: '67px',
-    top: '40px',
     }}
     >
         انتخاب

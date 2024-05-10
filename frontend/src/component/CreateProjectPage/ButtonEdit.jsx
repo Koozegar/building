@@ -4,12 +4,11 @@ import Button from "@mui/material/Button";
 import "./direction.css";
 function ButtonEdit() {
   return (
-    <Box>
+    
       <Button
         variant="h6"
         sx={{
           
-          pointerEvents: "none",
           
           color: "#F15F2B",
           border: "3px #F15F2B solid",
@@ -25,7 +24,7 @@ function ButtonEdit() {
       >
         تغییر پروژه
       </Button>
-    </Box>
+  
   );
 }
 

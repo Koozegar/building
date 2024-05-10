@@ -23,7 +23,7 @@ const VisuallyHiddenInput = styled('input')({
     width: 1,
   });
 
-export default function CustomizedInputBase() {
+export default function CustomizedInputBase(x) {
   return (
     <Paper
       component="form"
@@ -54,7 +54,7 @@ export default function CustomizedInputBase() {
         fontSize='20px'
         dir='rtl'
       >
-        تصویر شاخص کار
+        {x}
       </Typography>
       
     </Paper>

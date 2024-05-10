@@ -7,8 +7,9 @@ import { Grid } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { lime, purple ,orange} from '@mui/material/colors';
+import { lime, purple ,orange, red, blue, pink} from '@mui/material/colors';
 import './custom-button.css'
+import { dark } from '@mui/material/styles/createPalette';
 
 
 const DemoButton = styled(Button)(({ theme }) => ({
@@ -18,16 +19,19 @@ const DemoButton = styled(Button)(({ theme }) => ({
     ...theme.typography.body2,
     margin:"10px",
     borderRadius: "12px",
-    backgroundColor: "#F15F2B",
-    color: "#FFFFFF",
+    backgroundColor: "#F3F3F3",
+    color: "#9E9E9E",
     fontFamily:"vazir"
   }))
 
   const theme = createTheme({
     palette: {
-      primary: lime,
-      secondary: orange,
-    },
+        secondary: {
+            light: '#ff7961',
+            main: '#f44336',
+            dark: '#c2c2c2',
+            contrastText: '#000',
+          },    },
   });
 
 function CustomButton (name){

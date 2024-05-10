@@ -60,7 +60,6 @@ export default function MultipleSelectPlaceholder() {
             </MenuItem>
           ))}
         </Select>
-      {/* </FormControl> */}
     </div>
   );
 }

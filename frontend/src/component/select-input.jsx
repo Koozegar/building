@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Select, { components } from 'react-select';
 import './custom-button.css';
 import '@fontsource/roboto/700.css';
-const SelectInput = () => {
+const SelectInput = (x) => {
     const [selectedValue, setSelectedValue] = useState(null);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const handleSelectChange = (newValue) => {
@@ -96,7 +96,7 @@ const SelectInput = () => {
                 value={selectedValue}
                 onChange={handleSelectChange}
                 icon={<IoIosArrowDown/>}
-                placeholder='انتخاب طبقه'
+                placeholder={x}
                 styles={customStyles}
             />
         </div>

@@ -15,13 +15,15 @@ import { dark } from '@mui/material/styles/createPalette';
 const DemoButton = styled(Button)(({ theme }) => ({
     // width: 300,
 
-    maxWidth: '220px', maxHeight: '50px', minWidth: '220px', minHeight: '50px',
+    maxWidth: '220px', maxHeight: '50px', minWidth: '220px', minHeight: '50px',width:'213px',
     ...theme.typography.body2,
     margin:"10px",
     borderRadius: "12px",
     backgroundColor: "#F3F3F3",
     color: "#9E9E9E",
-    fontFamily:"vazir"
+    fontFamily: "yekan-bakh",
+    fontSize:'24px',
+    fontWeight:'700px'
   }))
 
   const theme = createTheme({

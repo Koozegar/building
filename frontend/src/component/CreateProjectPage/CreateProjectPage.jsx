@@ -65,13 +65,15 @@ function CreateProjectPage (){
         <Box my={13}>
         <Grid
         sx={{
-            height: "550px",
-            width: "586px",
+            height: "723px",
+            width: "576px",
             bgcolor: "white",
             borderRadius: "30px",
             fontSize: "36px",
             justifyContent: 'center',
-            margin: "auto",
+            marginTop: "-25px",
+            marginLeft:'auto',
+            marginRight:'auto',
           }}
         container
         >
@@ -79,33 +81,37 @@ function CreateProjectPage (){
     <Typography 
       sx={{
       fontSize: "40px",
+      fontWeight:'700px',
       mt: '30px',
       fontFamily: "yekan",
+      marginTop:'67px'
       }}
       > ایجاد پروژه جدید </Typography>
 
-    <Grid>{TextFild('عنوان پروژه')}</Grid>
-    <Grid sx={{marginLeft:'68px',
-    fontFamily:'vazir',
+    <Grid sx={{marginTop:'-21px',fontSize:'50px'}}>{TextFild('عنوان پروژه')}</Grid>
+    <Grid sx={{
+    width:'438px',
+    fontFamily:'yekan',
     fontSize: '20px',
     fontWeight: '500px',
-    marginTop:'50px'}}>
+    marginTop:'-20px',
+    lMarginLeft:'-50px',
+    textAlign:'right'
+    }}>
             <SwitchInput sx={{
-                marginRight:'10px'
+                marginRight:'55px'
             }}/>
                 آیا این پروژه زیر مجموعه پروژه دیگری است؟
         </Grid>
         <EditButton
         sx={{marginLeft:'68px',
-    marginTop:'50px',
-    width: '440px',
+    marginBottom:'50px',
+    width: '438px',
     height:'50px',}}></EditButton>
 
-    <Grid>{CustomSeparator(["khbi","khobi"])}</Grid>
-    <Grid>{CustomButton2('انصراف')}</Grid>
-    <Grid>{CustomButton('ایجاد')}</Grid>
-
-    
+    <Grid sx={{marginTop:'-10px'}}>{CustomSeparator(["khbi","khobi"])}</Grid>
+    <Grid sx={{marginTop:'5px'}}>{CustomButton2('انصراف')}</Grid>
+    <Grid sx={{marginTop:'5px'}}>{CustomButton('ایجاد')}</Grid>
         </Grid>
         </Box>
 )

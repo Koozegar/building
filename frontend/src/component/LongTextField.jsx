@@ -22,7 +22,7 @@ const DemoInput = styled(TextField)(({ theme }) => ({
         textAlign: "right",
         transformOrigin: "center",
         "&.Mui-focused": {
-            transformOrigin: "center"
+            transformOrigin: "center",
         }
     }
 }));

@@ -14,7 +14,7 @@ import './custom-button.css'
 const DemoButton = styled(Button)(({ theme }) => ({
     // width: 300,
 
-    maxWidth: '220px', maxHeight: '50px', minWidth: '100px', minHeight: '50px',width:'213px',
+    maxWidth: '200px', maxHeight: '50px', minWidth: '200px', minHeight: '50px',width:'200px',
     ...theme.typography.body2,
     margin:"10px",
     borderRadius: "12px",

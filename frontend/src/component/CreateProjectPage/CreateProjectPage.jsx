@@ -62,11 +62,11 @@ import CustomSeparator from './direction';
 // }
 function CreateProjectPage (){
     return(
-        <Box my={13}>
+        <Box my={9}>
         <Grid
         sx={{
-            height: "723px",
-            width: "576px",
+            height: "650px",
+            width: "500px",
             bgcolor: "white",
             borderRadius: "30px",
             fontSize: "36px",
@@ -90,7 +90,7 @@ function CreateProjectPage (){
 
     <Grid sx={{marginTop:'-21px',fontSize:'50px'}}>{TextFild('عنوان پروژه')}</Grid>
     <Grid sx={{
-    width:'438px',
+    width:'400px',
     fontFamily:'yekan',
     fontSize: '20px',
     fontWeight: '500px',
@@ -106,12 +106,12 @@ function CreateProjectPage (){
         <EditButton
         sx={{marginLeft:'68px',
     marginBottom:'50px',
-    width: '438px',
+    width: '400px',
     height:'50px',}}></EditButton>
 
     <Grid sx={{marginTop:'-10px'}}>{CustomSeparator(["khbi","khobi"])}</Grid>
-    <Grid sx={{marginTop:'5px'}}>{CustomButton2('انصراف')}</Grid>
-    <Grid sx={{marginTop:'5px'}}>{CustomButton('ایجاد')}</Grid>
+    <Grid sx={{marginTop:'3px'}}>{CustomButton2('انصراف')}</Grid>
+    <Grid sx={{marginTop:'3px'}}>{CustomButton('ایجاد')}</Grid>
         </Grid>
         </Box>
 )

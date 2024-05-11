@@ -16,8 +16,8 @@ function ButtonEdit() {
           fontFamily: "yekan-bakh",
           fontSize: "23px",
           borderRadius: "45px",
-          width: "438px",
-          height: "64px",
+          width: "400px",
+          height: "55px",
           gap: "10px",
           padding: "16px, 177px, 16px, 177px",
         }}

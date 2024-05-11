@@ -5,8 +5,8 @@ import { styled } from '@mui/material/styles';
 import './text-fild.css'
 
 const DemoInput = styled(TextField)(({ theme }) => ({
-    width: '458px',
-    height: '120px',
+    width: '340px',
+    height: '100px',
     ...theme.typography.body2,
     borderRadius: "40px",
     margin: "6px 6px 6px 6px",
@@ -32,7 +32,9 @@ export default function LongTextField(name) {
         <Box
             component="form"
             sx={{
-                '& .MuiTextField-root': { m: 1, width: '458px' },
+                mt: '-15px',
+
+                '& .MuiTextField-root': { m: 1,   width: '345px', },
             }}
             noValidate
             autoComplete="off"

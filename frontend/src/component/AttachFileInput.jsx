@@ -27,11 +27,10 @@ export default function CustomizedInputBase(x) {
   return (
     <Paper
       component="form"
-      color='#F3F3F3'
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 438 , height: 64 , borderRadius: '45px'}}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '330px' , height: '50px' , borderRadius: '45px',backgroundColor:'#F3F3F3'}}
     >
       <IconButton 
-        sx={{ 
+        sx={{
           p: '10px', 
           left: '5px' 
         }} 

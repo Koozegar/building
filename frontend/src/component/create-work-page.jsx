@@ -1,10 +1,13 @@
 import TextFild from "./text-fild";
 // import SelectInput from "./select-input";
 import CustomizedInputBase from "./AttachFileInput";
-import CustomButton from "./custom-button";
 import { Grid , Box , Typography, FormControl, InputLabel, Select, MenuItem, FormHelperText, TableRow, ButtonGroup, Button} from "@mui/material";
 import './login-singup.css'
 import { useState } from "react";
+import LongTextField from "./LongTextField";
+import CustomButton from "./CreateProjectPage/custom-button";
+import CustomButton2 from "./CreateProjectPage/custom-button2";
+
 
 function WorkView (){
 
@@ -19,7 +22,7 @@ function WorkView (){
         <Grid
         sx={{
             height: "723px",
-            width: "586px",
+            width: "500px",
             bgcolor: "white",
             borderRadius: "30px",
             fontSize: "36px",
@@ -31,16 +34,16 @@ function WorkView (){
             
             <Typography
             sx={{
-                fontSize: "40px",
-                mt: '25px',
+                fontSize: "35px",
+                mt: '10px',
                 position: 'relative',
                 fontFamily: "yekan",
                 }}
             >ایجاد کار جدید</Typography>
-            <Grid>{TextFild('عنوان کار')}</Grid>
-            <Grid sx={{mt: '-15px'}}>{CustomButton('انتخاب پروژه')}</Grid>
+            <Grid sx={{mt: '-20px'}}>{TextFild('عنوان کار')}</Grid>
+            <Grid sx={{mt: '-20px'}}>{CustomButton('انتخاب پروژه')}</Grid>
 
-            <Grid sx={{direction:'rtl',mt: '-15px'}}> 
+            <Grid sx={{direction:'rtl',mt: '-20px'}}> 
         <FormControl fontSize='30px'  variant="filled" sx={{  m: 1.5, minWidth: 340, Height: '50px', backgroundColor: "F3F3F3" }}>
         <InputLabel id="demo-customized-select-label" color='warning' bo  sx={{width:'290px',fontFamily: 'yekan', color:'9E9E9E' }}>انتخاب طبقه</InputLabel>
         <Select
@@ -67,21 +70,21 @@ function WorkView (){
         {/* <FormHelperText>طبقه ای که کار باید در آن تعریف شود را انتخاب کنید</FormHelperText> */}
       </FormControl>
             </Grid>
-            <Grid sx={{mb: '-20px', mt: '-20px'}}>{TextFild('شرح مختصر کار')}</Grid>
-            <Grid>{TextFild('شرح پیش نیاز')}</Grid>
+            <Grid >{LongTextField('شرح مختصر کار')}</Grid>
+            <Grid>{LongTextField('شرح پیش نیاز')}</Grid>
             <Grid
               sx={{
                 fontSize: "40px",
-                mt: '-10px',
+                mt: '-15px',
                 position: 'relative',
                 fontFamily: "yekan",
               
                 }}
             >{CustomizedInputBase('تصویر شاخص کار')}</Grid>
-                       <Grid
+              <Grid
               sx={{
                 fontSize: "40px",
-                // mt: '20px',
+                mt: '-5px',
                 position: 'relative',
                 fontFamily: "yekan",
               
@@ -89,7 +92,7 @@ function WorkView (){
             >{CustomizedInputBase('فایل پیوست')}</Grid>
             
             
-            <ButtonGroup
+            {/* <ButtonGroup
             variant="contained"
             color='warning'
             sx={{margin: 'auto',borderRadius:'15px',
@@ -98,7 +101,10 @@ function WorkView (){
           >
             <Button sx={{width:'213px',height:'55px', borderRadius: '15px',fontFamily: 'yekan'}} href=''>انصراف</Button>
             <Button sx={{width:'213px',borderRadius: '15px',fontFamily: 'yekan'}}>ایجاد</Button>
-          </ButtonGroup>
+          </ButtonGroup> */}
+            <Grid sx={{mt: '-15px'}}>{CustomButton2('انصراف')}</Grid>
+
+            <Grid sx={{mt: '-15px',ml:'-15px'}}>{CustomButton('ایجاد')}</Grid>
 
         </Grid>
     </Box>

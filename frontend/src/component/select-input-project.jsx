@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './text-fild.css'
+import { Grid } from '@mui/material';
 
 const names = [
   'طبقه 5',
@@ -26,7 +27,10 @@ export default function MultipleSelectPlaceholder() {
   const [personName, setPersonName] = React.useState([]);
   
   return (
-    <div >
+    <Grid sx={{'& .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper': {
+      color:'red'
+    },
+    }}>
         <Select sx={{
           '& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon': {
             right:'265px'
@@ -67,6 +71,6 @@ export default function MultipleSelectPlaceholder() {
             </MenuItem>
           ))}
         </Select>
-    </div>
+    </Grid>
   );
 }

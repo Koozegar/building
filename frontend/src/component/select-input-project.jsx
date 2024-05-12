@@ -15,6 +15,11 @@ const names = [
   'طبقه 1',
 ];
 
+
+
+
+
+
 function getStyles(name, personName) {
   return {
     fontWeight:

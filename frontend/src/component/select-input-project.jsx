@@ -20,6 +20,7 @@ const names = [
 
 
 
+
 function getStyles(name, personName) {
   return {
     fontWeight:

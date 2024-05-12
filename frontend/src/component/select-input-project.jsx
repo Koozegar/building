@@ -8,8 +8,8 @@ import './text-fild.css'
 import { Grid } from '@mui/material';
 
 const names = [
-  'طبقه 5',
-  'طبقه 4',
+  'پروژه 5',
+  'پروژه 4',
   'طبقه 3',
   'طبقه 2',
   'طبقه 1',
@@ -33,10 +33,7 @@ export default function MultipleSelectPlaceholder() {
   const [personName, setPersonName] = React.useState([]);
   
   return (
-    <Grid sx={{'& .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper': {
-      color:'red'
-    },
-    }}>
+    <div >
         <Select sx={{
           '& .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon': {
             right:'265px'
@@ -56,7 +53,7 @@ export default function MultipleSelectPlaceholder() {
           value={personName}
           renderValue={(selected) => {
             if (selected.length === 0) {
-              return 'انتخاب طبقه';
+              return 'انتخاب پروژه';
             }
 
             return selected.join(', ');
@@ -77,6 +74,6 @@ export default function MultipleSelectPlaceholder() {
             </MenuItem>
           ))}
         </Select>
-    </Grid>
+    </div>
   );
 }
